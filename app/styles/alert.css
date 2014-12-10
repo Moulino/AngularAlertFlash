@@ -30,9 +30,17 @@
     color: inherit;
 }
 .alert-success {
-    color: #3c763d;
-    background-color: #dff0d8;
+    color: #ffffff;
     border-color: #d6e9c6;
+    background: #b4e391; /* Old browsers */
+    background: -moz-linear-gradient(top,  #b4e391 0%, #61c419 50%, #b4e391 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b4e391), color-stop(50%,#61c419), color-stop(100%,#b4e391)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #b4e391 0%,#61c419 50%,#b4e391 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #b4e391 0%,#61c419 50%,#b4e391 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #b4e391 0%,#61c419 50%,#b4e391 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #b4e391 0%,#61c419 50%,#b4e391 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4e391', endColorstr='#b4e391',GradientType=0 ); /* IE6-9 */
+
 }
 .alert-success hr {
     border-top-color: #c9e2b3;
@@ -41,9 +49,17 @@
     color: #2b542c;
 }
 .alert-info {
-    color: #31708f;
-    background-color: #d9edf7;
+    color: #ffffff;
     border-color: #bce8f1;
+    background: #d6f9ff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #d6f9ff 0%, #9ee8fa 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d6f9ff), color-stop(100%,#9ee8fa)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #d6f9ff 0%,#9ee8fa 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #d6f9ff 0%,#9ee8fa 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #d6f9ff 0%,#9ee8fa 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #d6f9ff 0%,#9ee8fa 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6f9ff', endColorstr='#9ee8fa',GradientType=0 ); /* IE6-9 */
+
 }
 .alert-info hr {
     border-top-color: #a6e1ec;
@@ -63,9 +79,17 @@
     color: #66512c;
 }
 .alert-danger {
-    color: #a94442;
-    background-color: #f2dede;
+    color: #ffffff;
     border-color: #ebccd1;
+    background: #ff3019; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ff3019 0%, #cf0404 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff3019), color-stop(100%,#cf0404)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ff3019 0%,#cf0404 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ff3019 0%,#cf0404 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ff3019 0%,#cf0404 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ff3019 0%,#cf0404 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=0 ); /* IE6-9 */
+
 }
 .alert-danger hr {
     border-top-color: #e4b9c0;
@@ -78,9 +102,45 @@
     position: fixed;
     right: 20px;
     top: 20px;
+    font-size: 15px;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 }
 
 .alert {
     width: 250px;
     box-shadow: 0 0 3px;
 }
+
+.repeat-animation.ng-enter,
+.repeat-animation.ng-leave {
+    -webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    position: relative;
+    display: block;
+}
+
+.repeat-animation.ng-leave.ng-leave-active,
+.repeat-animation.ng-enter {
+    -webkit-transform: rotateX(-180deg) translatez(30px);
+    -moz-transform: rotateX(-180deg) translatez(30px);
+    -ms-transform: rotateX(-180deg) translatez(30px);
+    -o-transform: rotateX(-180deg) translatez(30px);
+    transform: rotateX(-180deg) translatez(30px);
+    opacity: 0;
+    height: 0px;
+}
+
+.repeat-animation.ng-enter.ng-enter-active,
+.repeat-animation.ng-leave {
+    -webkit-transform: rotateX(0deg) translatez(30px);
+    -moz-transform: rotateX(0deg) translatez(30px);
+    -ms-transform: rotateX(0deg) translatez(30px);
+    -o-transform: rotateX(0deg) translatez(30px);
+    transform: rotateX(0deg) translatez(30px);
+    opacity: 1;
+    height: 30px;
+}
+

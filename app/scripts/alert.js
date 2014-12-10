@@ -22,6 +22,8 @@
  *       (1) alertService.success(message) - success message to be shown
  *       (2) alertService.error(message) - error message to be shown
  *       (3) alertService.info(message) - info message to be shown
+ *
+ * Animation is also added, will work if ngAnimate is included
  */
 angular.module('alert', [])
     .constant('alertConfig', {
@@ -72,7 +74,7 @@ angular.module('alert', [])
     .directive('alertFlash', ['alertService', function(alertService) {
         return {
             restrict: 'E',
-            template: "<div class='alert-container'><div ng-repeat='alert in alerts'><div class='alert' ng-class='alert.typeOfAlert' ng-bind='alert.msg'></div></div></div>",
+            template: "<div class='alert-container'><div class='repeat-animation' ng-repeat='alert in alerts'><div class='alert' ng-class='alert.typeOfAlert' ng-bind='alert.msg'></div></div></div>",
             scope: {},
             link: function($scope, $element, $attrs) {
                 $scope.$watch(alertService.getAlert, function(){
