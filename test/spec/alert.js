@@ -20,14 +20,14 @@ describe('module: alert', function(){
     });
 
     // test alert service provider
-    describe('alertServiceProvider', function(){
+    describe('flashAlertProvider', function(){
 
         var AlertServiceProvider;
         beforeEach(function(){
             // Initialize the service provider by injecting it to a fake module's config block
             angular.module('testApp', function () {})
-                .config(function (alertServiceProvider) {
-                    AlertServiceProvider = alertServiceProvider;
+                .config(function (flashAlertProvider) {
+                    AlertServiceProvider = flashAlertProvider;
                 });
             // Initialize myApp injector
             module('alert', 'testApp');
@@ -42,13 +42,13 @@ describe('module: alert', function(){
     });
 
     // test alert service
-    describe('alertService', function(){
+    describe('flashAlert', function(){
 
         var alertConfig, alertService, $timeout;
 
-        beforeEach(inject(function(_alertConfig_, _alertService_,_$timeout_){
+        beforeEach(inject(function(_alertConfig_, flashAlert,_$timeout_){
             alertConfig = _alertConfig_;
-            alertService = _alertService_;
+            alertService = flashAlert;
             $timeout = _$timeout_;
         }));
 
