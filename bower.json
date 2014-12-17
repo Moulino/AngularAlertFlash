@@ -28,9 +28,6 @@
   },
   "dependencies": {
     "angular": "~1.2.0",
-    "json3": "~3.3.1",
-    "es5-shim": "~3.1.0",
-    "bootstrap": "~3.2.0",
     "angular-animate": "~1.2.0"
   },
   "devDependencies": {
