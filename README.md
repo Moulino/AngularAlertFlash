@@ -3,6 +3,14 @@ AngularAlertFlash
 
 Alert plugin for angular application
 
+Installation
+------------
+
+It is available from bower registry:
+```
+bower install angular-alertflash
+```
+
 Usage
 -----
 
@@ -26,18 +34,18 @@ Inject 'alert' module at application level module. Use provider to configure ela
 See below for example:
 
 ```js
-angular.module('myApp',['alert']).config(function(alertServiceProvider){
+angular.module('myApp',['alert']).config(function(flashAlertProvider){
     alertServiceProvider.setAlertTime(millis);
 });
 ```
 
-Inject 'alertService' in controller to alert.
+Inject 'flashAlert' in controller to alert.
 
 ```js
-angular.controller('myController', function(alertService){
-    alertService.success(message);
-    alertService.error(message);
-    alertService.info(message)
+angular.controller('myController', function(flashAlert){
+    flashAlert.success(message);
+    flashAlert.error(message);
+    flashAlert.info(message)
 });
 ```
 

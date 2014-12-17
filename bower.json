@@ -1,6 +1,31 @@
 {
   "name": "angular-alert-flash",
-  "version": "0.0.0",
+  "description": "stylish lightweight alert for angular from anywhere",
+  "version": "1.0",
+  "main": [
+      "dist/alert.min.css",
+      "dist/alert.min.js"
+  ],
+  "ignore":[
+      ".*",
+      "app/*",
+      "bower_components/*",
+      "node_modules/*",
+      "test/*",
+      "Gruntfile.js"
+  ],
+  "keywords":[
+      "angular-alert",
+      "alert",
+      "flash"
+  ],
+  "authors":[
+      "Nishith Modi <modi.29nisu@gmail.com>"
+  ],
+  "repository": {
+      "type":"git",
+      "url":"git://github.com/nishith29/AngularAlertFlash.git"
+  },
   "dependencies": {
     "angular": "~1.2.0",
     "json3": "~3.3.1",
