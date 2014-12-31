@@ -35,7 +35,7 @@ See below for example:
 
 ```js
 angular.module('myApp',['alert']).config(function(flashAlertProvider){
-    alertServiceProvider.setAlertTime(millis);
+    flashAlertProvider.setAlertTime(millis);
 });
 ```
 
